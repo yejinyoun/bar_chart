@@ -6,17 +6,22 @@ let model = [
   28, 29, 30, 31, 32, 1, 2, 3, 4, 5, 6, 7, 8,
 ];
 
-console.log(model);
+const customers = getNumberOfCustomers();
+
+modifyBars();
 
 function init() {}
 
 function loop() {}
 
-function getNumberOfCustomers() {}
+function getNumberOfCustomers() {
+  //gives a current customer number (between 0-32) : FAKE gets random number
+  return Math.floor(Math.random() * 32);
+}
 
-modifyModel();
+function modifyModel() {}
 
-function modifyModel() {
+function modifyBars() {
   //i = index of each element in the model(array); model[0]
   // make it read one by one and create html and modify the height;
 
@@ -33,5 +38,3 @@ function modifyModel() {
     }
   }
 }
-
-function modifyBars() {}
