@@ -8,7 +8,7 @@ body {
 }
 
 #barchart {
-  background-color: pink;
+  background-color: royalblue;
 
   box-sizing: border-box;
   width: 100%;
@@ -18,14 +18,14 @@ body {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  align-items: baseline;
+  align-items: flex-end;
 }
 
 .bar {
-  background-color: red;
-  border: 2px solid blue;
+  background-color: yellow;
+  border: 2px solid royalblue;
   box-sizing: border-box;
   width: 100%;
   max-width: 100/40vw;
-  height: 200px;
+  height: 100px;
 }
