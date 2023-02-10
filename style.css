@@ -25,7 +25,6 @@ body {
   background-color: yellow;
   border: 2px solid royalblue;
   box-sizing: border-box;
-  width: 100%;
-  max-width: 100/40vw;
+  width: calc(100vw / 40);
   height: 100px;
 }
