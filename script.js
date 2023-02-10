@@ -1,20 +1,22 @@
 "use strict";
 console.log("hihi!");
 
-let model = [
-  1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27,
-  28, 29, 30, 31, 32, 1, 2, 3, 4, 5, 6, 7, 8,
-];
+let model = [];
 
 console.log(model);
 
-modifyModel();
+init();
 
-modifyBars();
+function init() {
+  loop();
+}
 
-function init() {}
+function loop() {
+  modifyModel();
+  modifyBars();
 
-function loop() {}
+  setTimeout(loop, 1000);
+}
 
 function getNumberOfCustomers() {
   //gives a current customer number (between 0-32) : FAKE gets random number
@@ -44,16 +46,14 @@ function modifyModel() {
 
 function modifyBars() {
   //i = index of each element in the model(array); model[0]
-  // make it read one by one and create html and modify the height;
+  // make it read one by one and modify the height;
 
   for (let i = 0; i <= 39; i++) {
     if (model[i] !== undefined) {
       // if the model[i] is undefined, don't just generate bars w base setting
 
-      const bar = document.createElement("div");
-      bar.className = "bar";
+      const bar = document.getElementById(`${i}`);
       bar.style.height = `${(300 / 32) * model[i]}px`;
-      document.querySelector("#barchart").appendChild(bar);
 
       console.log(`${model[i]}customers and bar height is ${model[i] * (300 / 32)}px`);
     }
